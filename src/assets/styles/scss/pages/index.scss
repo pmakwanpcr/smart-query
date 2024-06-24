@@ -1,0 +1,23 @@
+//  ============> COMMON <============
+
+@import "../common/variables";
+@import "../common/themeVariables";
+
+//  ============> LAYOUT'S <============
+
+@import "../layout/header";
+
+//  ============> PAGE'S <============
+
+@import "./login.scss";
+@import "./smartQuery.scss";
+
+//  ============> GLOBAL CSS <============
+
+.theme--btn {
+	max-width: 88px;
+	width: 100%;
+	padding: 2.5px 0px;
+	background-color: $themeBlack;
+	border-radius: 2px;
+}

@@ -1,0 +1,91 @@
+@import "../common/variables";
+
+//  ============> FONT-SIZE'S <============
+
+.font-29 {
+	font-size: $font-29;
+}
+.font-24 {
+	font-size: $font-24;
+}
+.font-21 {
+	font-size: $font-21;
+}
+.font-14 {
+	font-size: $font-14;
+}
+.font-16 {
+	font-size: $font-16;
+}
+.font-20 {
+	font-size: $font-20;
+}
+.font-19 {
+	font-size: $font-19;
+}
+.font-12 {
+	font-size: $font-12;
+}
+.font-11 {
+	font-size: $font-11;
+}
+.font-10 {
+	font-size: $font-10;
+}
+.font-9 {
+	font-size: $font-9;
+}
+
+//  ============> FONT-COLOR'S <============
+
+.text-primary-black {
+	color: $themePrimaryBlack;
+}
+.text-secondry-black {
+	color: $themeSecondryBlack;
+}
+.text-light-black {
+	color: $themeLightBlack;
+}
+.text-secondry-default {
+	color: $themeSecondryDefault;
+}
+.text-secondry-light-color {
+	color: $themeSeconderyLightColor;
+}
+.text-white-primary {
+	color: $themeStaticWhite !important;
+}
+.text-theme-color {
+	color: $themeFontColor;
+}
+.text-sec-theme-color {
+	color: $themeSeconderyFontColor !important;
+}
+.text-default-font-color {
+	color: $themeDefaultFontColor;
+}
+.text-dark-default-color {
+	color: $themeDarkDefaultColor;
+}
+.text-danger-color {
+	color: $themeDangerColor;
+}
+.text-primary-color {
+    color: $themePrimaryColor;
+}
+
+//  ============> BACKGROUD COLOR'S <============
+
+.bg-theme-bg {
+	background-color: $themeBGcolor;
+}
+.bg-static-white {
+	background-color: $themeStaticWhite;
+}
+.bg-light-black {
+	background-color: $themeLightBlack !important;
+}
+.bg-thme-black {
+	background-color: $themeBlack;
+}
