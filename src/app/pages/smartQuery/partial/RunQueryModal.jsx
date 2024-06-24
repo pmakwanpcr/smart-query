@@ -30,12 +30,12 @@ const RunQueryModal = ({
 	checkIfDate,
 	setSortGroupModalOpen,
 	setSortGroupFilter,
-	handleDeleteFilters,
+	setSortGroupTableValue,
 	modalStyle,
 	options,
 	filterGroupOption,
 }) => {
-    const navigate =useNavigate()
+	const navigate = useNavigate();
 	return (
 		<ReactDynamicModal
 			title={`Run query ${queryName ? `-` + " " + queryName : "*"}`}
@@ -79,7 +79,7 @@ const RunQueryModal = ({
 					className="bg-thme-black text-sec-theme-color font-10 border-0 text-capitalize p-0"
 					disabled={queryName === ""}
 					onClick={() => {
-				        setIsModalOpen(false);
+						setIsModalOpen(false);
 						navigate(pageRoutes.smart_query_result);
 						store.dispatch(
 							handleAllFilter({
@@ -183,50 +183,60 @@ const RunQueryModal = ({
 						})}
 					</>
 				)}
-				{!isEmpty(sortGroupTableValue?.flat()) &&
-					sortGroupTableValue?.flat()?.map((item, i) => {
-						return (
-							<React.Fragment key={i}>
-								<div className="d-flex align-items-center justify-content-between sorting--button">
-									<h4 className="font-16">{item?.key}</h4>
-									<div className="filter--btn-box d-flex align-items-center">
-										<button
-											type="button"
-											className="border-0 btn btn-transparent p-0 d-block"
-											onClick={() => {
-												setSortGroupModalOpen(true);
-												setSortGroupFilter([item]);
-											}}
-										>
-											<Icon icon="ic:round-edit" className="d-block font-20" />
-										</button>
-										<button type="button" className="btn btn-transparent p-0 text-danger-color d-block" onClick={() => handleDeleteFilters(i)}>
-											<Icon icon="material-symbols-light:delete-outline" className="d-block font-20" />
-										</button>
-									</div>
-								</div>
+				{!isEmpty(sortGroupTableValue?.flat()) && (
+					<>
+						<div className="d-flex align-items-center justify-content-between sorting--button">
+							<h4 className="font-16">Sort group</h4>
+							<div className="filter--btn-box d-flex align-items-center">
+								<button
+									type="button"
+									className="border-0 btn btn-transparent p-0 d-block"
+									onClick={() => {
+										setSortGroupModalOpen(true);
 
-								<Table striped bordered className="mb-0 filter--table align-middle">
-									<thead>
-										<tr>
-											<th className="bg-light-black font-10 text-sec-theme-color">Field Name</th>
-											<th className="bg-light-black font-10 text-sec-theme-color">operation</th>
+                                        setSortGroupFilter(sortGroupTableValue?.flat());
+									}}
+								>
+									<Icon icon="ic:round-edit" className="d-block font-20" />
+								</button>
+								<button
+									type="button"
+									className="btn btn-transparent p-0 text-danger-color d-block"
+									onClick={() => {
+										setSortGroupTableValue([]);
+										setSortGroupFilter([
+											{
+												fieldName: "",
+												order: "",
+											},
+										]);
+									}}
+								>
+									<Icon icon="material-symbols-light:delete-outline" className="d-block font-20" />
+								</button>
+							</div>
+						</div>
+
+						<Table striped bordered className="mb-0 filter--table align-middle">
+							<thead>
+								<tr>
+									<th className="bg-light-black font-10 text-sec-theme-color">Field Name</th>
+									<th className="bg-light-black font-10 text-sec-theme-color">order</th>
+								</tr>
+							</thead>
+							<tbody>
+								{sortGroupTableValue?.flat()?.map((item, i) => {
+									return (
+										<tr key={i}>
+											<td className="font-10 text-theme-color">{item?.fieldName}</td>
+											<td className="font-10 text-theme-color">{item?.order}</td>
 										</tr>
-									</thead>
-									<tbody>
-										{item?.all_filter?.map((items, i) => {
-											return (
-												<tr key={i}>
-													<td className="font-10 text-theme-color">{items?.fieldName}</td>
-													<td className="font-10 text-theme-color">{items?.operation}</td>
-												</tr>
-											);
-										})}
-									</tbody>
-								</Table>
-							</React.Fragment>
-						);
-					})}
+									);
+								})}
+							</tbody>
+						</Table>
+					</>
+				)}
 			</div>
 		</ReactDynamicModal>
 	);

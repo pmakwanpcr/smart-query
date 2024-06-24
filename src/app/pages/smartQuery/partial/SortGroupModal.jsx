@@ -15,7 +15,7 @@ const ShortGroupModal = ({
 	sortGroupFilter,
 	setSortGroupModalOpen,
 	setSortGroupTableValue,
-	sortGroupTableValue,
+	handleSort,
 }) => {
 	const FieldNameoptions = [
 		{ value: "RawPositionId", label: "RawPositionId" },
@@ -29,60 +29,25 @@ const ShortGroupModal = ({
 		{ value: "Decending", label: "decending" },
 	];
 
-	const handleChange = (groupIndex, filterIndex, field, value) => {
-		setSortGroupFilter((prevFilters) => {
-			const updatedFilters = [...prevFilters];
-			updatedFilters[groupIndex] = {
-				...updatedFilters[groupIndex],
-				all_filter: updatedFilters[groupIndex].all_filter.map((filter, index) => (index === filterIndex ? { ...filter, [field]: value } : filter)),
-			};
-			return updatedFilters;
-		});
+	const handleSave = () => {
+		const uniqueFilters = sortGroupFilter.filter(
+			(filter, index, self) => index === self.findIndex((t) => t.fieldName === filter.fieldName && t.order === filter.order)
+		);
+		setSortGroupTableValue(uniqueFilters);
+		setSortGroupModalOpen(false);
+		setSortGroupFilter(uniqueFilters);
 	};
 
-	const handleDeleteFilter = (index) => {
-		const updatedFilters = sortGroupFilter.map((items) => {
-			return { ...items, all_filter: items.all_filter.filter((_, i) => i !== index) };
-		});
-
+	const handleChange = (index, key, value) => {
+		const updatedFilters = sortGroupFilter.map((filter, i) => (i === index ? { ...filter, [key]: value } : filter));
 		setSortGroupFilter(updatedFilters);
 	};
 
-	const handleSave = () => {
-		const updatedFilterGroups = sortGroupTableValue.map((group) => {
-			const existingGroup = sortGroupFilter.find((filterGroup) => filterGroup.key === group.key);
-			if (existingGroup) {
-				return { ...existingGroup };
-			} else {
-				return group;
-			}
-		});
-
-		sortGroupFilter.forEach((newGroup) => {
-			if (!sortGroupTableValue.some((group) => group.key === newGroup.key)) {
-				updatedFilterGroups.push({ ...newGroup });
-			}
-		});
-		setSortGroupTableValue(updatedFilterGroups);
-		setSortGroupModalOpen(false);
+	const handleDeleteFilter = (index) => {
+		const updatedFilters = sortGroupFilter.filter((_, i) => i !== index);
+		setSortGroupFilter(updatedFilters);
 	};
 
-	const handleAddFilter = () => {
-		setSortGroupFilter((prev) =>
-			prev?.map((item) => {
-				return {
-					...item,
-					all_filter: [
-						...item.all_filter,
-						{
-							fieldName: "",
-							operation: "",
-						},
-					],
-				};
-			})
-		);
-	};
 	return (
 		<ReactDynamicModal
 			show={isSortGroupModalOpen}
@@ -94,61 +59,53 @@ const ShortGroupModal = ({
 			}}
 		>
 			<div className="d-flex justify-content-end button--wrap">
-				<button
-					type="button"
-					className="font-10 text-capitalize text-light-black d-block btn btn-transparent p-0"
-					onClick={handleAddFilter}
-				>
+				<button type="button" className="font-10 text-capitalize text-light-black d-block btn btn-transparent p-0" onClick={handleSort}>
 					+sort
 				</button>
 				<button
 					type="button"
 					className="bg-thme-black text-sec-theme-color border-0 font-10 text-capitalize d-block"
 					onClick={handleSave}
-					disabled={sortGroupFilter.every((item) => item.fieldName === "" && item.order === "")}
+					disabled={sortGroupFilter.some((item) => item.fieldName === "" || item.order === "")}
 				>
 					save
 				</button>
 			</div>
 
-			{sortGroupFilter.map((filterGroup, groupIndex) =>
-				filterGroup?.all_filter?.map((filter, filterIndex) => {
-					return (
-						<div key={groupIndex + "-" + filterIndex} className="d-flex align-items-end sort--group--content">
-							<div className="content--box">
-								<div className=" run-query--select">
-									<label className="font-10 text-capitalize text-dark-default-color d-block">Field Name</label>
-									<Select
-										options={FieldNameoptions}
-										onChange={(e) => handleChange(groupIndex, filterIndex, "fieldName", e?.value)}
-										value={FieldNameoptions.find((item) => item.value === filter.fieldName) || ""}
-										placeholder="Select"
-									/>
-								</div>
-							</div>
-							<div className="content--box">
-								<div className=" run-query--select">
-									<label className="font-10 text-capitalize text-dark-default-color d-block">Operation</label>
-									<Select
-										options={Operationoptions}
-										onChange={(e) => handleChange(groupIndex, filterIndex, "operation", e?.value)}
-										value={Operationoptions.find((item) => item.value === filter.operation) || ""}
-										placeholder="Select"
-									/>
-								</div>
-							</div>
-							<button
-								type="button"
-								className="p-0 btn btn-transparent border-0 text-danger-color"
-								onClick={() => handleDeleteFilter(filterIndex)}
-								disabled={sortGroupFilter.some((item) => item.all_filter.length == 1)}
-							>
-								<Icon icon="material-symbols-light:delete-outline" className="d-block font-29" />
-							</button>
+			{sortGroupFilter?.map((filter, index) => (
+				<div key={index} className="d-flex align-items-end sort--group--content">
+					<div className="content--box">
+						<div className=" run-query--select">
+							<label className="font-10 text-capitalize text-dark-default-color d-block">Field Name</label>
+							<Select
+								options={FieldNameoptions}
+								onChange={(e) => handleChange(index, "fieldName", e?.value)}
+								value={FieldNameoptions.find((item) => item.value === filter.fieldName) || ""}
+								placeholder="Select"
+							/>
 						</div>
-					);
-				})
-			)}
+					</div>
+					<div className="content--box">
+						<div className=" run-query--select">
+							<label className="font-10 text-capitalize text-dark-default-color d-block">Operation</label>
+							<Select
+								options={Operationoptions}
+								onChange={(e) => handleChange(index, "order", e?.value)}
+								value={Operationoptions.find((item) => item.value === filter.order) || ""}
+								placeholder="Select"
+							/>
+						</div>
+					</div>
+					<button
+						type="button"
+						className="p-0 btn btn-transparent border-0 text-danger-color"
+						onClick={() => handleDeleteFilter(index)}
+						disabled={sortGroupFilter.length === 1}
+					>
+						<Icon icon="material-symbols-light:delete-outline" className="d-block font-29" />
+					</button>
+				</div>
+			))}
 		</ReactDynamicModal>
 	);
 };

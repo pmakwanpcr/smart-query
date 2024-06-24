@@ -208,9 +208,22 @@ const SmartQuery = () => {
 		setSortGroupFilter([newFilterGroup]);
 	};
 
+	// const handleSort = () => {
+	// 	setSortGroupModalOpen(true);
+	// 	handleAddSortFilter();
+	// };
+
 	const handleSort = () => {
 		setSortGroupModalOpen(true);
-		handleAddSortFilter();
+		if (sortGroupFilter.length >= 1 && !sortGroupFilter.every((item) => item.fieldName === "" || item.order === "")) {
+			setSortGroupFilter([
+				...sortGroupFilter,
+				{
+					fieldName: "",
+					order: "",
+				},
+			]);
+		}
 	};
 
 	const handleDeleteFilter = (index) => {
@@ -313,6 +326,7 @@ const SmartQuery = () => {
 					options={options}
 					filterGroupOption={filterGroupOption}
 					handleDeleteFilters={handleDeleteFilters}
+					setSortGroupTableValue={setSortGroupTableValue}
 				/>
 			)}
 			{/* Run query Modal <------- */}
@@ -340,8 +354,7 @@ const SmartQuery = () => {
 					isSortGroupModalOpen={isSortGroupModalOpen}
 					setSortGroupModalOpen={setSortGroupModalOpen}
 					setSortGroupTableValue={setSortGroupTableValue}
-					initialSortFilterState={initialSortFilterState}
-					sortGroupTableValue={sortGroupTableValue}
+					handleSort={handleSort}
 				/>
 			)}
 			{/* Open Short-Group Modal <------- */}

@@ -31,411 +31,423 @@ const outputFieldsData = [
 	{ id: "Label2", label: "Label" },
 ];
 
-	const columns = [
-		{
-			accessor: "row_position_id",
-			Header: "RowPositionId",
-		},
-		{
-			accessor: "account_name",
-			Header: "accountName",
-		},
-		{
-			accessor: "account_number",
-			Header: "accountNumber",
-		},
-		{
-			accessor: "account_type",
-			Header: "Account Type",
-		},
-		{
-			accessor: "accured_interest_base",
-			Header: "AccuredInterestBase",
-		},
-		{
-			accessor: "accured_interest_local",
-			Header: "AccuredInterestLocal",
-		},
-		{
-			accessor: "acquisition_date",
-			Header: "AcquisitionDate",
-		},
-	];
+const columns = [
+	{
+		accessor: "row_position_id",
+		Header: "RowPositionId",
+	},
+	{
+		accessor: "account_name",
+		Header: "accountName",
+	},
+	{
+		accessor: "account_number",
+		Header: "accountNumber",
+	},
+	{
+		accessor: "account_type",
+		Header: "Account Type",
+	},
+	{
+		accessor: "accured_interest_base",
+		Header: "AccuredInterestBase",
+	},
+	{
+		accessor: "accured_interest_local",
+		Header: "AccuredInterestLocal",
+	},
+	{
+		accessor: "acquisition_date",
+		Header: "AcquisitionDate",
+	},
+];
 
-	const datas = [
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-		{
-			row_position_id: "Label",
-			account_name: "Label",
-			account_number: "Label",
-			account_type: "Label",
-			accured_interest_base: "Label",
-			accured_interest_local: "Label",
-			acquisition_date: "Label",
-		},
-	];
+const datas = [
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+	{
+		row_position_id: "Label",
+		account_name: "Label",
+		account_number: "Label",
+		account_type: "Label",
+		accured_interest_base: "Label",
+		accured_interest_local: "Label",
+		acquisition_date: "Label",
+	},
+];
 
 const SmartQueryResultTable = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isSecondSelectDisabled, setIsSecondSelectDisabled] = useState(true);
+	const [isFilterGroupOneModalOpen, setIsFilterGroupOneModalOpen] = useState(false);
+	const [isOutputFields, setIsOutputFields] = useState(false);
+	const [isSortGroupModalOpen, setSortGroupModalOpen] = useState(false);
+	const [isSaveQueryModalOpen, setSaveQueryModalOpen] = useState(false);
+	const [selectedOption, setSelectOption] = useState(null);
+	const [filterGroupTableValue, setFilterGroupTableValue] = useState([]);
+	const [queryName, setQueryName] = useState("");
+	const [sortGroupTableValue, setSortGroupTableValue] = useState([]);
+	const [groupOneFilter, setGroupOneFilter] = useState({
+		selectAndOr: "",
+		fieldName: "",
+		operation: "",
+		filterValue: "",
+	});
+	const [selectedFields, setSelectedFields] = useState(
+		outputFieldsData.reduce((acc, field) => {
+			acc[field.id] = true;
+			return acc;
+		}, {})
+	);
+	const [selectAll, setSelectAll] = useState(true);
+	const [displayedFields, SetDisplayedFieds] = useState([]);
+	const all_filter_value = useSelector((state) => state.auth?.all_filter);
+	const [sortGroupFilter, setSortGroupFilter] = useState([
+		{
+			fieldName: "",
+			order: "",
+		},
+	]);
 
-			const [isModalOpen, setIsModalOpen] = useState(false);
-			const [isSecondSelectDisabled, setIsSecondSelectDisabled] = useState(true);
-			const [isFilterGroupOneModalOpen, setIsFilterGroupOneModalOpen] = useState(false);
-			const [isOutputFields, setIsOutputFields] = useState(false);
-			const [isSortGroupModalOpen, setSortGroupModalOpen] = useState(false);
-			const [isSaveQueryModalOpen, setSaveQueryModalOpen] = useState(false);
-			const [selectedOption, setSelectOption] = useState(null);
-			const [filterGroupTableValue, setFilterGroupTableValue] = useState([]);
-			const [queryName, setQueryName] = useState("");
-			const [sortGroupTableValue, setSortGroupTableValue] = useState([]);
-			const [groupOneFilter, setGroupOneFilter] = useState({
-				selectAndOr: "",
-				fieldName: "",
-				operation: "",
-				filterValue: "",
-			});
-			const [selectedFields, setSelectedFields] = useState(
-				outputFieldsData.reduce((acc, field) => {
-					acc[field.id] = true;
-					return acc;
-				}, {})
-			);
-			const [selectAll, setSelectAll] = useState(true);
-			const [displayedFields, SetDisplayedFieds] = useState([]);
-			const all_filter_value = useSelector((state) => state.auth?.all_filter);
-			const [sortGroupFilter, setSortGroupFilter] = useState([
+	const initialFilterState = [
+		{
+			key: "",
+			all_filter: [{ fieldName: "", operation: "", filterValue: "" }],
+		},
+	];
+
+	const filterGroupOption = [
+		{ value: "and", label: "AND" },
+		{ value: "or", label: "OR" },
+	];
+
+	// const initialSortFilterState = [
+	// 	{
+	// 		key: "",
+	// 		all_filter: [{ fieldName: "", operation: "" }],
+	// 	},
+	// ];
+
+	const [filters, setFilters] = useState([]);
+
+	const handleFirstSelectChange = (selectedOption) => {
+		setSelectOption(selectedOption);
+		setIsSecondSelectDisabled(false);
+	};
+
+	const handleOutputFieldsClick = () => {
+		if (!isSecondSelectDisabled) {
+			setIsOutputFields(true);
+		}
+	};
+
+	const handleSelectAll = () => {
+		const newSelectAll = !selectAll;
+		const newSelectedFields = outputFieldsData.reduce((acc, field) => {
+			acc[field.id] = newSelectAll;
+			return acc;
+		}, {});
+		setSelectedFields(newSelectedFields);
+		setSelectAll(newSelectAll);
+	};
+
+	const handleCheckboxChange = (id) => {
+		setSelectedFields((prevState) => {
+			const newSelectedFields = { ...prevState, [id]: !prevState[id] };
+			setSelectAll(Object.values(newSelectedFields).every((value) => value));
+			return newSelectedFields;
+		});
+	};
+
+	const handleAddFilterGroup = () => {
+		const newFilterGroup = {
+			key: `Filter Group ${filterGroupTableValue.length + 1}`,
+			all_filter: [
+				{
+					fieldName: "",
+					operation: "",
+					filterValue: "",
+				},
+			],
+		};
+		setFilters([newFilterGroup]);
+	};
+
+	// const handleAddSortFilter = () => {
+	// 	const newFilterGroup = {
+	// 		key: `Sort Group ${sortGroupTableValue.length + 1}`,
+	// 		all_filter: [
+	// 			{
+	// 				fieldName: "",
+	// 				operation: "",
+	// 			},
+	// 		],
+	// 	};
+	// 	setSortGroupFilter([newFilterGroup]);
+	// };
+
+	// const handleSort = () => {
+	// 	setSortGroupModalOpen(true);
+	// 	handleAddSortFilter();
+	// };
+
+	const handleSort = () => {
+		setSortGroupModalOpen(true);
+		if (sortGroupFilter.length >= 1 && !sortGroupFilter.every((item) => item.fieldName === "" || item.order === "")) {
+			setSortGroupFilter([
+				...sortGroupFilter,
 				{
 					fieldName: "",
 					order: "",
 				},
 			]);
+		}
+	};
 
-		
-			const initialFilterState = [
-				{
-					key: "",
-					all_filter: [{ fieldName: "", operation: "", filterValue: "" }],
-				},
-			];
+	const handleDeleteFilter = (index) => {
+		const updatedFilters = filterGroupTableValue.filter((_, i) => i !== index);
+		setFilters(updatedFilters);
+		setFilterGroupTableValue(updatedFilters);
+	};
 
-			const initialSortFilterState = [
-				{
-					key: "",
-					all_filter: [{ fieldName: "", operation: "" }],
-				},
-			];
+	const handleDeleteFilters = (index) => {
+		const updatedFilters = sortGroupTableValue.filter((_, i) => i !== index);
+		setSortGroupFilter(updatedFilters);
+		setSortGroupTableValue(updatedFilters);
+	};
 
-			const [filters, setFilters] = useState([]);
+	const handleSubmit = () => {
+		const selected = outputFieldsData.filter((field) => selectedFields[field.id]);
+		SetDisplayedFieds(selected);
+		setIsOutputFields(false);
+	};
 
-			const handleFirstSelectChange = (selectedOption) => {
-				setSelectOption(selectedOption);
+	const checkIfDate = (value) => {
+		const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+		if (!dateRegex.test(value)) {
+			return false;
+		}
+		const date = new Date(value);
+		return !isNaN(date.getTime());
+	};
+
+	useEffect(() => {
+		if (all_filter_value) {
+			if (all_filter_value?.filterGroupTableValue?.filterGroupTableValue.length > 0) {
+				setFilterGroupTableValue(all_filter_value.filterGroupTableValue?.filterGroupTableValue);
+			}
+			if (all_filter_value?.sortGroupTableValue?.sortGroupTableValue?.length > 0) {
+				setSortGroupTableValue(all_filter_value.sortGroupTableValue?.sortGroupTableValue);
+			}
+			if (all_filter_value?.selectedOption?.selectedOption) {
+				setSelectOption(all_filter_value.selectedOption?.selectedOption);
+			}
+			if (all_filter_value?.queryName) {
+				setQueryName(all_filter_value.queryName);
+			}
+			if (all_filter_value?.outputField) {
+				SetDisplayedFieds(all_filter_value.outputField);
 				setIsSecondSelectDisabled(false);
-			};
+			}
+		}
+	}, [all_filter_value]);
 
-			const handleOutputFieldsClick = () => {
-				if (!isSecondSelectDisabled) {
-					setIsOutputFields(true);
-				}
-			};
-
-			const handleSelectAll = () => {
-				const newSelectAll = !selectAll;
-				const newSelectedFields = outputFieldsData.reduce((acc, field) => {
-					acc[field.id] = newSelectAll;
-					return acc;
-				}, {});
-				setSelectedFields(newSelectedFields);
-				setSelectAll(newSelectAll);
-			};
-
-			const handleCheckboxChange = (id) => {
-				setSelectedFields((prevState) => {
-					const newSelectedFields = { ...prevState, [id]: !prevState[id] };
-					setSelectAll(Object.values(newSelectedFields).every((value) => value));
-					return newSelectedFields;
-				});
-			};
-
-			const handleAddFilterGroup = () => {
-				const newFilterGroup = {
-					key: `Filter Group ${filterGroupTableValue.length + 1}`,
-					all_filter: [
-						{
-							fieldName: "",
-							operation: "",
-							filterValue: "",
-						},
-					],
-				};
-				setFilters([newFilterGroup]);
-			};
-
-			const handleAddSortFilter = () => {
-				const newFilterGroup = {
-					key: `Sort Group ${sortGroupTableValue.length + 1}`,
-					all_filter: [
-						{
-							fieldName: "",
-							operation: "",
-						},
-					],
-				};
-				setSortGroupFilter([newFilterGroup]);
-			};
-
-			const handleSort = () => {
-				setSortGroupModalOpen(true);
-				handleAddSortFilter();
-			};
-
-			const handleDeleteFilter = (index) => {
-				const updatedFilters = filterGroupTableValue.filter((_, i) => i !== index);
-				setFilters(updatedFilters);
-				setFilterGroupTableValue(updatedFilters);
-			};
-
-				const handleDeleteFilters = (index) => {
-					const updatedFilters = sortGroupTableValue.filter((_, i) => i !== index);
-					setSortGroupFilter(updatedFilters);
-					setSortGroupTableValue(updatedFilters);
-				};
-
-			const handleSubmit = () => {
-				const selected = outputFieldsData.filter((field) => selectedFields[field.id]);
-				SetDisplayedFieds(selected);
-				setIsOutputFields(false);
-			};
-
-			const checkIfDate = (value) => {
-				const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-				if (!dateRegex.test(value)) {
-					return false;
-				}
-				const date = new Date(value);
-				return !isNaN(date.getTime());
-			};
-
-			useEffect(() => {
-				if (all_filter_value) {
-					if (all_filter_value?.filterGroupTableValue?.filterGroupTableValue.length > 0) {
-						setFilterGroupTableValue(all_filter_value.filterGroupTableValue?.filterGroupTableValue);
-					}
-					if (all_filter_value?.sortGroupTableValue?.sortGroupTableValue?.length > 0) {
-						setSortGroupTableValue(all_filter_value.sortGroupTableValue?.sortGroupTableValue);
-					}
-					if (all_filter_value?.selectedOption?.selectedOption) {
-						setSelectOption(all_filter_value.selectedOption?.selectedOption);
-					}
-					if (all_filter_value?.queryName) {
-						setQueryName(all_filter_value.queryName);
-					}
-					if (all_filter_value?.outputField) {
-						SetDisplayedFieds(all_filter_value.outputField);
-						setIsSecondSelectDisabled(false);
-					}
-				}
-			}, [all_filter_value]);
-
-			
-
-
-    
 	return (
 		<>
 			<section className="samrt--section bg-theme-bg">
@@ -487,7 +499,9 @@ const SmartQueryResultTable = () => {
 					setSortGroupFilter={setSortGroupFilter}
 					modalStyle={modalStyle}
 					options={options}
+					filterGroupOption={filterGroupOption}
 					handleDeleteFilters={handleDeleteFilters}
+					setSortGroupTableValue={setSortGroupTableValue}
 				/>
 			)}
 			{/* Run query Modal <------- */}
@@ -515,8 +529,7 @@ const SmartQueryResultTable = () => {
 					isSortGroupModalOpen={isSortGroupModalOpen}
 					setSortGroupModalOpen={setSortGroupModalOpen}
 					setSortGroupTableValue={setSortGroupTableValue}
-					initialSortFilterState={initialSortFilterState}
-					sortGroupTableValue={sortGroupTableValue}
+					handleSort={handleSort}
 				/>
 			)}
 			{/* Open Short-Group Modal <------- */}
